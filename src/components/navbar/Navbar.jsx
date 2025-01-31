@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from 'react-router-dom';
 import logo from '../../assets/EFS Apparel.png';
 import { user, cart, heart, search } from './import';
 
@@ -18,10 +18,22 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex space-x-6">
-                    <a href="#women" className="hover:underline">WOMEN</a>
-                    <a href="#men" className="hover:underline">MEN</a>
-                    <a href="#accessories" className="hover:underline">ACCESSORIES</a>
-                    <a href="#more" className="hover:underline">MORE</a>
+                    <Link to="#women" className="group relative">
+                        <span>WOMEN</span>
+                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    </Link>
+                    <Link to="#men" className="group relative">
+                        <span>MEN</span>
+                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    </Link>
+                    <Link to="#accessories" className="group relative">
+                        <span>ACCESSORIES</span>
+                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    </Link>
+                    <Link to="#more" className="group relative">
+                        <span>MORE</span>
+                        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                    </Link>
                 </div>
 
                 {/* Icons Placeholder */}
@@ -50,10 +62,22 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden">
                     <div className="flex flex-col p-4 space-y-4 relative z-10">
-                        <a href="#women" className="hover:underline">WOMEN</a>
-                        <a href="#men" className="hover:underline">MEN</a>
-                        <a href="#accessories" className="hover:underline">ACCESSORIES</a>
-                        <a href="#more" className="hover:underline">MORE</a>
+                        <Link to="#women" className="group relative">
+                            <span>WOMEN</span>
+                            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        </Link>
+                        <Link to="#men" className="group relative">
+                            <span>MEN</span>
+                            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        </Link>
+                        <Link to="#accessories" className="group relative">
+                            <span>ACCESSORIES</span>
+                            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        </Link>
+                        <Link to="#more" className="group relative">
+                            <span>MORE</span>
+                            <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                        </Link>
                     </div>
                     <div className="border-l-2 border-gray-500 h-full mx-4"></div>
                     <div className="flex flex-col p-4 space-y-4 relative z-10">
