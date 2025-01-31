@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/efs-store-frontend/static/css/main.ac70d0ea.css",
+    "main.js": "/efs-store-frontend/static/js/main.4f68d355.js",
+    "static/media/CJR-843.jpg": "/efs-store-frontend/static/media/CJR-843.bf527d0fdcedea9c2304.jpg",
+    "static/media/CJR00354.JPG": "/efs-store-frontend/static/media/CJR00354.54761396db53078b4cd7.JPG",
+    "static/media/CJR00363.JPG": "/efs-store-frontend/static/media/CJR00363.fa88b0ddc3dec4c84968.JPG",
+    "static/media/cover.png": "/efs-store-frontend/static/media/cover.8a6befb059d33cd432dc.png",
+    "index.html": "/efs-store-frontend/index.html",
+    "main.ac70d0ea.css.map": "/efs-store-frontend/static/css/main.ac70d0ea.css.map",
+    "main.4f68d355.js.map": "/efs-store-frontend/static/js/main.4f68d355.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac70d0ea.css",
+    "static/js/main.4f68d355.js"
+  ]
+}
