@@ -11,11 +11,11 @@ const API_BASE_URL = "http://127.0.0.1:8000/sheets";
 // Fetch data from Google Sheets
 const fetchWishlist = async () => {
     try {
-    const response = await axios.get(`${API_BASE_URL}/data`);
-    console.log("API Response:", response.data); // Debugging line
-    setWishlist(response.data || []); // Ensure array format
+        const response = await axios.get(`${API_BASE_URL}/data`);
+        console.log("API Response:", response.data); // Debugging line
+        setWishlist(response.data || []);
     } catch (error) {
-    console.error("Error fetching wishlist:", error);
+        console.error("Error fetching wishlist:", error);
     }
 };
 
@@ -72,36 +72,41 @@ return (
 
     {/* Wishlist Table */}
     <table className="w-full border-collapse border border-gray-300">
-        <thead>
+    <thead>
         <tr className="bg-gray-200">
-            <th className="border border-gray-300 px-4 py-2">Item</th>
+            <th className="border border-gray-300 px-4 py-2">Product</th>
+            <th className="border border-gray-300 px-4 py-2">Current Price</th>
+            <th className="border border-gray-300 px-4 py-2">Suggested Price</th>
             <th className="border border-gray-300 px-4 py-2">Actions</th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         {wishlist.length > 0 ? (
             wishlist.map((item, index) => (
-            <tr key={index} className="text-center">
-                <td className="border border-gray-300 px-4 py-2">{item}</td>
-                <td className="border border-gray-300 px-4 py-2">
-                <button
-                    onClick={() => deleteItem(index)}
-                    className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
-                >
-                    Delete
-                </button>
-                </td>
-            </tr>
+                <tr key={index} className="text-center">
+                    <td className="border border-gray-300 px-4 py-2">{item.product}</td>
+                    <td className="border border-gray-300 px-4 py-2">₱{item.current_price}</td>
+                    <td className="border border-gray-300 px-4 py-2">₱{item.suggested_price}</td>
+                    <td className="border border-gray-300 px-4 py-2">
+                        <button
+                            onClick={() => deleteItem(index)}
+                            className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600"
+                        >
+                            Delete
+                        </button>
+                    </td>
+                </tr>
             ))
         ) : (
             <tr>
-            <td colSpan="2" className="text-center py-4 text-gray-500">
-                No items in wishlist
-            </td>
+                <td colSpan="4" className="text-center py-4 text-gray-500">
+                    No items in wishlist
+                </td>
             </tr>
         )}
-        </tbody>
-    </table>
+    </tbody>
+</table>
+
     </div>
 );
 };
