@@ -41,7 +41,9 @@ const Navbar = () => {
                     <div className="flex space-x-4 cursor-pointer">
                         <img src={search} alt="search" />
                         <img src={cart} alt="cart" />
-                        <img src={heart} alt="wishlist" />
+                        <Link to="/wishlist">
+                            <img src={heart} alt="wishlist" />
+                        </Link>
                         {/* Make the user icon a link to the profile page */}
                         <Link to="/profile">
                             <img src={user} alt="user" />

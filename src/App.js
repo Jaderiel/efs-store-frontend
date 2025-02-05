@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components';
 import { Header, Popular, NewArrivals } from './container';
-import Profile from './pages/Profile'; //pakiayos to pag more than 1 na ang pages
+import { Profile, Wishlist } from './pages';
 
 const App = () => {
     return (
@@ -12,6 +12,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<><Header /><Popular /><NewArrivals /></>} />
                     <Route path="/profile" element={<Profile />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
                 </Routes>
             </div>
         </Router>
