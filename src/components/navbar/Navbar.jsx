@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/EFS Apparel.png';
 import { user, cart, heart, search } from './import';
-import { InputText } from 'primereact/inputtext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
