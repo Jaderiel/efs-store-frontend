@@ -4,11 +4,21 @@ const Footer = () => {
     return (
         <div>
         <div className='flex justify-center items-center p-8 gap-10 mt-10'>
-            <i className='pi pi-instagram cursor-pointer' style={{ fontSize: '2rem' }}></i>
-            <i className='pi pi-facebook cursor-pointer' style={{ fontSize: '2rem' }}></i>
-            <i className='pi pi-tiktok cursor-pointer' style={{ fontSize: '2rem' }}></i>
-            <i className='pi pi-twitter cursor-pointer' style={{ fontSize: '2rem' }}></i>
-            <i className='pi pi-youtube cursor-pointer' style={{ fontSize: '2rem' }}></i>
+            <a href="https://www.instagram.com/efs_apparel/" target="_blank" rel="noopener noreferrer">
+                <i className='pi pi-instagram cursor-pointer hover:text-gray-500 transition-all duration-300' style={{ fontSize: '2rem' }}></i>
+            </a>
+            <a href="https://www.facebook.com/EFSApparel" target="_blank" rel="noopener noreferrer">
+                <i className='pi pi-facebook cursor-pointer hover:text-gray-500 transition-all duration-300' style={{ fontSize: '2rem' }}></i>
+            </a>
+            <a href="https://www.tiktok.com/@efsapparel" target="_blank" rel="noopener noreferrer">
+                <i className='pi pi-tiktok cursor-pointer hover:text-gray-500 transition-all duration-300' style={{ fontSize: '2rem' }}></i>
+            </a>
+            <a href="https://x.com/EFS_Apparel" target="_blank" rel="noopener noreferrer">
+                <i className='pi pi-twitter cursor-pointer hover:text-gray-500 transition-all duration-300' style={{ fontSize: '2rem' }}></i>
+            </a>
+            <a href="https://www.youtube.com/@EFSAPPAREL" target="_blank" rel="noopener noreferrer">
+                <i className='pi pi-youtube cursor-pointer hover:text-gray-500 transition-all duration-300' style={{ fontSize: '2rem' }}></i>
+            </a>
         </div>
         <div className='flex justify-center items-center flex-col gap-4'>
             <p className='cursor-pointer'>About EFS</p>
