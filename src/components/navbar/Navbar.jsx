@@ -3,9 +3,11 @@ import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/EFS Apparel.png';
 import { user, cart, heart, search } from './import';
+import { InputText } from 'primereact/inputtext';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isFocused, setIsFocused] = useState(false);
 
     return (
         <nav className="bg-transparent fixed top-0 left-0 w-full z-10 p-4">
@@ -37,10 +39,23 @@ const Navbar = () => {
                 </div>
 
                 {/* Icons Placeholder */}
-                <div className="hidden md:block">
-                    <div className="flex space-x-4 cursor-pointer">
-                        <img src={search} alt="search" />
-                        <img src={cart} alt="cart" />
+                <div className="hidden md:block items-center">
+                    <div className="flex space-x-4 items-center cursor-pointer">
+                        <div className={`relative w-64 flex items-center border rounded-md transition-all duration-300 ${isFocused ? "border-blue-500 shadow-md" : "border-gray-300"}`}>
+                            {/* Search Icon */}
+                            <i className="pi pi-search absolute left-3 text-gray-500 transition-transform duration-300 cursor-pointer hover:scale-110"></i>
+                            {/* Search Input */}
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="w-full h-8 pl-10 pr-3 text-sm text-gray-700 outline-none bg-white rounded-md focus:ring-0"
+                                onFocus={() => setIsFocused(true)}
+                                onBlur={() => setIsFocused(false)}
+                            />
+                        </div>
+                        <div>
+                            <img src={cart} alt="cart" />
+                        </div>
                         <Link to="/wishlist">
                             <img src={heart} alt="wishlist" />
                         </Link>
