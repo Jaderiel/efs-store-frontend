@@ -2,11 +2,23 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/EFS Apparel.png';
-import { user, cart, heart, search } from './import';
+import { user, cart, heart } from './import';
+import { Sidebar } from 'primereact/sidebar';
+import { Button } from 'primereact/button'; // Optional, if you want a close button in the sidebar
+import 'primeicons/primeicons.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isFocused, setIsFocused] = useState(false);
+    const [visible, setVisible] = useState(false);
+
+    const showSidebar = () => {
+        setVisible(true);
+    };
+
+    const hideSidebar = () => {
+        setVisible(false);
+    };
 
     return (
         <nav className="bg-transparent fixed top-0 left-0 w-full z-10 p-4">
@@ -53,12 +65,17 @@ const Navbar = () => {
                             />
                         </div>
                         <div>
-                            <img src={cart} alt="cart" />
+                            <div onClick={showSidebar}>
+                                <img src={cart} alt="cart" />
+                            </div>
+                            <Sidebar visible={visible} onHide={hideSidebar} position="right" transition="500ms" className="p-sidebar-right">
+                                <h2>Cart</h2>
+                                <p>Here is your cart content...</p>
+                            </Sidebar>
                         </div>
                         <Link to="/wishlist">
                             <img src={heart} alt="wishlist" />
                         </Link>
-                        {/* Make the user icon a link to the profile page */}
                         <Link to="/profile">
                             <img src={user} alt="user" />
                         </Link>
