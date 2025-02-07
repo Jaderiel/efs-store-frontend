@@ -4,7 +4,7 @@ import { Header, Popular, NewArrivals, Footer } from '../container';
 
 const LandingPage = () => {
     return (
-        <div>
+        <div className='bg-[#fcf8f1]'>
             <Navbar />
             <Header />
             <Popular />
