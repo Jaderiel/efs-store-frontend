@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
 import logo from '../../assets/EFS Apparel.png';
-import { user, cart, heart } from './import';
 import { Sidebar } from 'primereact/sidebar';
-import { Button } from 'primereact/button'; // Optional, if you want a close button in the sidebar
 import 'primeicons/primeicons.css';
 
 const Navbar = () => {
@@ -50,7 +48,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Icons Placeholder */}
-                <div className="hidden md:block items-center">
+                <div className="flex items-center hidden md:block">
                     <div className="flex space-x-4 items-center cursor-pointer">
                         <div className={`relative w-64 flex items-center border rounded-md transition-all duration-300 ${isFocused ? "border-blue-500 shadow-md" : "border-gray-300"}`}>
                             {/* Search Icon */}
@@ -59,14 +57,15 @@ const Navbar = () => {
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="w-full h-8 pl-10 pr-3 text-sm text-gray-700 outline-none bg-white rounded-md focus:ring-0"
+                                className="w-full h-7 pl-10 pr-3 text-sm text-gray-700 outline-none bg-white rounded-md focus:ring-0"
                                 onFocus={() => setIsFocused(true)}
                                 onBlur={() => setIsFocused(false)}
                             />
                         </div>
-                        <div>
+                        <div className="flex items-center">
                             <div onClick={showSidebar}>
-                                <img src={cart} alt="cart" />
+                                <i className="pi pi-shopping-cart" style={{ fontSize: '25px' }}></i>
+                                {/* <img src={cart} alt="cart" /> */}
                             </div>
                             <Sidebar visible={visible} onHide={hideSidebar} position="right" transition="500ms" className="p-sidebar-right">
                                 <h2>Cart</h2>
@@ -74,10 +73,10 @@ const Navbar = () => {
                             </Sidebar>
                         </div>
                         <Link to="/wishlist">
-                            <img src={heart} alt="wishlist" />
+                            <i className="pi pi-heart" style={{ fontSize: '25px' }}></i>
                         </Link>
                         <Link to="/profile">
-                            <img src={user} alt="user" />
+                            <i className="pi pi-user" style={{ fontSize: '25px' }}></i>
                         </Link>
                     </div>
                 </div>
