@@ -9,6 +9,7 @@
     "cra-template": "1.2.0",
     "googleapis": "^144.0.0",
     "gsap": "^3.12.7",
+    "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.474.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.2",
