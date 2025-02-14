@@ -65,7 +65,7 @@ const Navbar = () => {
                             </div>
                             <div className="flex items-center">
                                 <div onClick={showSidebar}>
-                                    <i className="pi pi-shopping-cart" style={{ fontSize: '25px' }}></i>
+                                    <i className="pi pi-shopping-cart hover:text-gray-500" style={{ fontSize: '25px' }}></i>
                                     {/* <img src={cart} alt="cart" /> */}
                                 </div>
                                 <Sidebar visible={visible} onHide={hideSidebar} position="right" transition="500ms" className="p-sidebar-right">
@@ -74,10 +74,10 @@ const Navbar = () => {
                                 </Sidebar>
                             </div>
                             <Link to="/wishlist">
-                                <i className="pi pi-heart" style={{ fontSize: '25px' }}></i>
+                                <i className="pi pi-heart hover:text-gray-500" style={{ fontSize: '25px' }}></i>
                             </Link>
                             <Link to="/profile">
-                                <i className="pi pi-user" style={{ fontSize: '25px' }}></i>
+                                <i className="pi pi-user hover:text-gray-500" style={{ fontSize: '25px' }}></i>
                             </Link>
                         </div>
                     </div>

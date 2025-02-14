@@ -1,6 +1,5 @@
-import React from 'react'
-import { Navbar } from '../components';
-import { SimilarProducts } from '../container';
+import React from 'react';
+import { Navbar, QuantityCounter } from '../components';
 
 const ItemPage = () => {
   return (
@@ -8,7 +7,7 @@ const ItemPage = () => {
     <div>
         <Navbar />
         <div className='mt-12'>
-            <div className='flex p-10 gap-10'>
+            <div className='flex p-10 gap-10 justify-center'>
 
                 <div className='flex flex-col gap-4'>
                     <div className='bg-blue-300 h-20 w-20'>1</div>
@@ -22,15 +21,30 @@ const ItemPage = () => {
                     <div className='bg-yellow-300 h-130 w-130'>4</div>
                 </div>
 
-                <div className='flex flex-col'>
-                    <h4 className='text-lg font-bold'>Product Name</h4>
-                    <p>Product Price</p>
-                    <p>sizes</p>
+                <div className='flex flex-col gap-4'>
                     <div>
-                        <button>ADD TO CART</button>
-                        <button>BUY NOW</button>
+                        <h4 className='text-2xl font-bold'>Camsy</h4>
+                        <p>₱ 899</p>
                     </div>
-                    <p>Product Description</p>
+                    <div>
+                        <p className='font-bold'>Color</p>
+                        <p>White 2</p>
+                    </div>
+                    <div>
+                        <p className='font-bold'>Size</p>
+                        <p>FS, XS, S, M, L, XL, 2XL</p>
+                    </div>
+                    <div>
+                        <QuantityCounter />
+                    </div>
+                    <div className='flex gap-4'>
+                        <button className='border border-black py-2 px-8 hover:bg-zinc-200 cursor-pointer'>ADD TO CART</button>
+                        <button className='bg-black text-white py-2 px-8 hover:bg-zinc-700 cursor-pointer'>BUY NOW</button>
+                    </div>
+                    <div>
+                        <p className='font-bold'>Product Description</p>
+                        <p>White cotton blouse with ribbon</p>
+                    </div>
                 </div>
             </div>
             <div>
@@ -41,4 +55,4 @@ const ItemPage = () => {
   )
 }
 
-export default ItemPage
+export default ItemPage 
