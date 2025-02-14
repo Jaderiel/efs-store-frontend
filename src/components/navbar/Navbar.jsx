@@ -31,19 +31,19 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex space-x-6">
                         <Link to="#women" className="group relative">
-                            <span>WOMEN</span>
+                            <span className="text-xs">WOMEN</span>
                             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                         <Link to="#men" className="group relative">
-                            <span>MEN</span>
+                            <span className="text-xs" >MEN</span>
                             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                         <Link to="#accessories" className="group relative">
-                            <span>ACCESSORIES</span>
+                            <span className="text-xs" >ACCESSORIES</span>
                             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                         <Link to="#more" className="group relative">
-                            <span>MORE</span>
+                            <span className="text-xs" >MORE</span>
                             <div className="absolute bottom-0 left-0 w-full h-0.5 bg-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                         </Link>
                     </div>
@@ -65,7 +65,7 @@ const Navbar = () => {
                             </div>
                             <div className="flex items-center">
                                 <div onClick={showSidebar}>
-                                    <i className="pi pi-shopping-cart hover:text-gray-500" style={{ fontSize: '25px' }}></i>
+                                    <i className="pi pi-shopping-cart hover:text-gray-500" style={{ fontSize: '22px' }}></i>
                                     {/* <img src={cart} alt="cart" /> */}
                                 </div>
                                 <Sidebar visible={visible} onHide={hideSidebar} position="right" transition="500ms" className="p-sidebar-right">
@@ -74,10 +74,10 @@ const Navbar = () => {
                                 </Sidebar>
                             </div>
                             <Link to="/wishlist">
-                                <i className="pi pi-heart hover:text-gray-500" style={{ fontSize: '25px' }}></i>
+                                <i className="pi pi-heart hover:text-gray-500" style={{ fontSize: '22px' }}></i>
                             </Link>
                             <Link to="/profile">
-                                <i className="pi pi-user hover:text-gray-500" style={{ fontSize: '25px' }}></i>
+                                <i className="pi pi-user hover:text-gray-500" style={{ fontSize: '22px' }}></i>
                             </Link>
                         </div>
                     </div>
