@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 
-//for tailwind
+// for Tailwind
 import './input.css';
 import './output.css';
 
@@ -13,6 +14,10 @@ import 'primereact/resources/primereact.min.css';                   // Core styl
 // Import PrimeIcons
 import 'primeicons/primeicons.css';  // Icon styles
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+
+root.render(
+    <GoogleOAuthProvider clientId="136876035427-153odpahtkkc7jg4cbbh7jf06u7vj0r4.apps.googleusercontent.com">
+        <App />
+    </GoogleOAuthProvider>
+);
